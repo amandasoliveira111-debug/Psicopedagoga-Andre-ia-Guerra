@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffaf9;
+  --foreground: #2e2a45;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-baloo);
+  --font-sans: var(--font-inter);
+
+  /* Brand palette, sampled from the Afetiva Infância identity */
+  --color-brand-blue-50: #eef4ff;
+  --color-brand-blue-100: #dbe8ff;
+  --color-brand-blue-300: #9db9f2;
+  --color-brand-blue-500: #4f7fe0;
+  --color-brand-blue-600: #3f68c7;
+  --color-brand-blue-700: #3454a3;
+
+  --color-brand-purple-100: #ede7fb;
+  --color-brand-purple-300: #c6b3f0;
+  --color-brand-purple-500: #9b7fe8;
+  --color-brand-purple-600: #7d5fd1;
+
+  --color-brand-pink-50: #fff1f6;
+  --color-brand-pink-100: #ffe0ec;
+  --color-brand-pink-300: #f9b8d2;
+  --color-brand-pink-500: #f28ab3;
+  --color-brand-pink-600: #e56a9b;
+
+  --color-brand-orange-300: #fcd29b;
+  --color-brand-orange-500: #f6a94f;
+
+  --color-brand-green-300: #b7e6c9;
+  --color-brand-green-500: #7ecb9c;
+
+  --color-ink: #2e2a45;
+  --color-ink-soft: #5b5770;
+  --color-ink-faint: #8b87a0;
+
+  --color-cream: #fffaf9;
+  --color-surface: #ffffff;
+
+  --shadow-soft: 0 10px 30px -12px rgba(79, 70, 130, 0.18);
+  --shadow-card: 0 16px 40px -16px rgba(79, 70, 130, 0.22);
+
+  --radius-xl2: 1.75rem;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: var(--color-brand-pink-300);
+  color: var(--color-ink);
+}
+
+/* Utility: hide scrollbar for drag-galleries while keeping native scroll/swipe */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
