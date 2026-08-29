@@ -143,28 +143,52 @@ export type Testimonial = {
   name: string;
   text: string;
   rating: number;
+  timeAgo?: string;
   isPlaceholder?: boolean;
 };
 
-// PLACEHOLDER — substituir pelos depoimentos reais do Google quando fornecidos.
 export const testimonials: Testimonial[] = [
   {
-    name: "Depoimento em breve",
-    text: "Espaço reservado para uma avaliação real do Google. Substitua este conteúdo pelos depoimentos verdadeiros de pais e responsáveis.",
+    name: "Kelly Rodrigues",
+    timeAgo: "4 anos atrás",
     rating: 5,
-    isPlaceholder: true,
+    text: "A Andréia é uma profissional maravilhosa. Super atenciosa, profissional e se torna amiga de todos. Minha sobrinha tem sido muito bem assistida por ela. Recomendo demais seu trabalho.",
   },
   {
-    name: "Depoimento em breve",
-    text: "Espaço reservado para uma avaliação real do Google. Substitua este conteúdo pelos depoimentos verdadeiros de pais e responsáveis.",
+    name: "Tatiana Kazumi H. Teruya",
+    timeAgo: "um mês atrás",
     rating: 5,
-    isPlaceholder: true,
+    text: "Ótima profissional!! Recomendo de olhos fechados!!! 🥰",
   },
   {
-    name: "Depoimento em breve",
-    text: "Espaço reservado para uma avaliação real do Google. Substitua este conteúdo pelos depoimentos verdadeiros de pais e responsáveis.",
+    name: "Giovanna Pieruzi",
+    timeAgo: "4 anos atrás",
     rating: 5,
-    isPlaceholder: true,
+    text: "Andréia é uma profissional excelente, muito competente e carinhosa com as crianças. Meu filho é apaixonado por ela.",
+  },
+  {
+    name: "Karina Alves",
+    timeAgo: "3 anos atrás",
+    rating: 5,
+    text: "Andréia, além de ser uma profissional maravilhosa, é uma querida! Super atenciosa! Minha filha adora!",
+  },
+  {
+    name: "Ellis Soares",
+    timeAgo: "2 anos atrás",
+    rating: 5,
+    text: "A Dra Andréia é maravilhosa!!!! Ajudou muito no início do tratamento do meu filho Rafael.",
+  },
+  {
+    name: "Susana",
+    timeAgo: "um mês atrás",
+    rating: 5,
+    text: "Querida Andreia, é incrível ver a evolução da minha filha desde que começou com você. Seu olhar cuidadoso, as atividades e o apoio fazem ela se sentir segura e motivada a aprender. Gratidão por ser uma profissional tão humana e competente.",
+  },
+  {
+    name: "Thais Coquejo",
+    timeAgo: "um mês atrás",
+    rating: 5,
+    text: "Quero deixar registrado o quanto sou grata pelo trabalho incrível da psicopedagoga Andreia. Minha filha chegou ao consultório sem estar alfabetizada, e hoje já está evoluindo muito, começando a ler e se desenvolvendo a cada dia. Além de ser uma excelente profissional, ela é extremamente carinhosa, paciente e dedicada. A Sophia ama estar com ela e não vê a hora de chegar o dia de vê-la, o que faz toda a diferença no processo de aprendizado. Sem dúvidas, recomendo de olhos fechados!",
   },
 ];
 

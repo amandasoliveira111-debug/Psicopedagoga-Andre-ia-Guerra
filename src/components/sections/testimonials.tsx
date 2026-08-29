@@ -49,7 +49,7 @@ export default function Testimonials() {
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
 
-                <div className="mt-auto flex items-center justify-between gap-3 pt-2">
+                <div className="mt-auto flex flex-col gap-1 pt-2">
                   <span className="font-semibold text-ink">{testimonial.name}</span>
                   <span className="flex items-center gap-1.5 text-xs text-ink-faint">
                     <span
@@ -57,6 +57,7 @@ export default function Testimonials() {
                       aria-hidden="true"
                     />
                     Avaliação do Google
+                    {testimonial.timeAgo && <> · {testimonial.timeAgo}</>}
                   </span>
                 </div>
               </div>
