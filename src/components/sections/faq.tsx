@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { WhatsappCta } from "@/components/ui/whatsapp-cta";
 import { faqs } from "@/lib/site-config";
 
 export default function Faq() {
@@ -18,7 +19,10 @@ export default function Faq() {
   return (
     <section id="duvidas" className="py-20 sm:py-28 bg-white">
       <Container className="max-w-3xl">
-        <SectionHeading eyebrow="Dúvidas frequentes" title="Tem alguma dúvida?" />
+        <SectionHeading
+          eyebrow="Dúvidas frequentes"
+          title="O que as famílias costumam perguntar sobre o atendimento psicopedagógico?"
+        />
 
         <div className="mt-12 flex flex-col gap-4">
           {faqs.map((item, index) => {
@@ -68,6 +72,12 @@ export default function Faq() {
             );
           })}
         </div>
+
+        <Reveal delay={faqs.length * 0.05} className="mt-10 flex justify-center">
+          <WhatsappCta variant="primary" size="lg" message="default">
+            Falar com Andréia pelo WhatsApp
+          </WhatsappCta>
+        </Reveal>
       </Container>
     </section>
   );

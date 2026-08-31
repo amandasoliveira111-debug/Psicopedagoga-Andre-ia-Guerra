@@ -10,10 +10,24 @@ type GalleryItem =
 
 const galleryItems: GalleryItem[] = [
   {
-    type: "video",
-    src: "/media/video/crianca-atividade.mp4",
-    poster: "/media/video/crianca-atividade-poster.jpg",
-    alt: "Criança em atividade de aprendizagem com cartões e materiais escritos",
+    type: "image",
+    src: "/media/images/crianca-cartoes.jpg",
+    alt: "Atividade de leitura e escrita com cartões de palavras",
+  },
+  {
+    type: "image",
+    src: "/media/images/crianca-quebra-cabeca.jpg",
+    alt: "Criança brincando com quebra-cabeça educativo",
+  },
+  {
+    type: "image",
+    src: "/media/images/crianca-avaliacao-vr.jpg",
+    alt: "Avaliação psicopedagógica com uso de realidade virtual",
+  },
+  {
+    type: "image",
+    src: "/media/images/espaco-recepcao-1.jpg",
+    alt: "Espaço preparado para atividades de aprendizagem",
   },
   {
     type: "video",
@@ -22,41 +36,48 @@ const galleryItems: GalleryItem[] = [
     alt: "Criança em atividade sensorial com brinquedo educativo",
   },
   {
-    type: "image",
-    src: "/media/images/crianca-quebra-cabeca.jpg",
-    alt: "Criança brincando com quebra-cabeça em atividade educativa",
-  },
-  {
-    type: "image",
-    src: "/media/images/andreia-sala-brincar.jpg",
-    alt: "Andréia na sala de atividades, utilizando materiais lúdicos de aprendizagem",
-  },
-  {
-    type: "image",
-    src: "/media/images/crianca-avaliacao-vr.jpg",
-    alt: "Criança durante avaliação com recursos de tecnologia, usando óculos de realidade virtual",
-  },
-  {
-    type: "image",
-    src: "/media/images/crianca-cartoes.jpg",
-    alt: "Criança realizando atividade de leitura e escrita com cartões de palavras",
+    type: "video",
+    src: "/media/video/crianca-atividade.mp4",
+    poster: "/media/video/crianca-atividade-poster.jpg",
+    alt: "Criança em atividade de aprendizagem com cartões e materiais escritos",
   },
 ];
 
 export default function Philosophy() {
   return (
     <section
-      id="desenvolvimento"
+      id="aprendizagem"
       className="bg-gradient-to-b from-brand-blue-50/60 via-white to-white py-20 sm:py-28"
     >
       <Container>
         <SectionHeading
-          eyebrow="Cada criança no seu tempo"
-          title="Cada criança tem seu próprio jeito de aprender."
-          description="Cada criança se desenvolve em seu próprio tempo. O acompanhamento busca compreender as necessidades individuais de cada criança, respeitando seu ritmo, suas características e sua forma única de aprender."
+          eyebrow="Compreender para intervir"
+          title="Aprender envolve muito mais do que compreender um conteúdo."
         />
 
-        <Reveal delay={0.1} className="mt-14">
+        <Reveal delay={0.1}>
+          <div className="mx-auto mt-6 max-w-2xl space-y-4 text-center text-base sm:text-lg leading-relaxed text-ink-soft">
+            <p>
+              A aprendizagem é resultado da integração entre diferentes
+              processos cognitivos, linguísticos, emocionais e executivos.
+            </p>
+            <p>
+              Atenção, memória, linguagem, funções executivas e raciocínio
+              lógico participam desse processo e ajudam a compreender por que
+              uma criança pode apresentar dificuldades de aprendizagem,
+              transtornos de aprendizagem, dificuldades na leitura, escrita ou
+              matemática, mesmo quando demonstra boas habilidades em outras
+              áreas.
+            </p>
+            <p>
+              Por isso, a avaliação psicopedagógica busca compreender como
+              esses processos estão funcionando e quais fatores podem estar
+              interferindo no desempenho escolar.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.2} className="mt-14">
           <DragGallery slideClassName="w-[78%] sm:w-[46%] lg:w-[30%]">
             {galleryItems.map((item) => (
               <div

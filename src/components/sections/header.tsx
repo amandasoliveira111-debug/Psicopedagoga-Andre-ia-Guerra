@@ -29,14 +29,26 @@ export default function Header() {
       )}
     >
       <Container className="flex h-full items-center justify-between">
-        <a href="#top" className="flex items-center gap-3" aria-label={`${brand.name} — início`}>
+        <a
+          href="#top"
+          className="flex flex-col leading-tight"
+          aria-label={`${brand.professional} — início`}
+        >
           <span
             className={cn(
-              "font-display text-lg font-semibold leading-none transition-colors duration-200 sm:text-xl",
+              "font-display text-lg font-semibold transition-colors duration-200 sm:text-xl",
               scrolled ? "text-ink" : "text-white"
             )}
           >
-            {brand.name}
+            {brand.professional}
+          </span>
+          <span
+            className={cn(
+              "text-xs font-medium tracking-wide transition-colors duration-200 sm:text-sm",
+              scrolled ? "text-ink-soft" : "text-white/80"
+            )}
+          >
+            {brand.role}
           </span>
         </a>
 

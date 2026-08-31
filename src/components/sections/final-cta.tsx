@@ -5,7 +5,7 @@ import { brand } from "@/lib/site-config";
 
 export default function FinalCta() {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28 bg-gradient-to-br from-brand-blue-500 via-brand-purple-500 to-brand-pink-500 text-white">
+    <section className="relative overflow-hidden py-20 sm:py-28 bg-gradient-to-br from-brand-blue-500 via-brand-blue-600 to-brand-purple-600 text-white">
       <div
         className="pointer-events-none absolute -top-24 -left-24 z-0 h-72 w-72 rounded-full bg-white/10 blur-3xl"
         aria-hidden="true"
@@ -17,31 +17,31 @@ export default function FinalCta() {
 
       <Container className="relative z-10 text-center max-w-2xl">
         <Reveal>
-          <div className="mx-auto inline-block rounded-3xl bg-white px-6 py-4 shadow-soft">
-            <span className="font-display text-2xl font-semibold text-ink sm:text-3xl">
-              {brand.name}
-            </span>
-          </div>
+          <span className="inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">
+            Vamos conversar?
+          </span>
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h2 className="mt-8 text-balance font-display text-3xl font-semibold sm:text-4xl">
-            Seu filho merece ser compreendido, acolhido e incentivado a
-            desenvolver todo o seu potencial.
+          <h2 className="mt-6 text-balance font-display text-3xl font-semibold sm:text-4xl">
+            Entender o que está dificultando a aprendizagem é o primeiro
+            passo para saber como ajudar.
           </h2>
         </Reveal>
 
         <Reveal delay={0.18}>
           <p className="mt-5 text-lg text-white/90">
-            Se você tem dúvidas sobre o desenvolvimento ou a aprendizagem da
-            sua criança, converse com a Andréia.
+            Se você percebe dificuldades de aprendizagem, leitura, escrita,
+            matemática, atenção ou organização escolar, podemos conversar
+            sobre a necessidade de uma avaliação psicopedagógica e os
+            próximos passos para o acompanhamento.
           </p>
         </Reveal>
 
         <Reveal delay={0.26}>
           <div className="mt-9">
             <WhatsappCta variant="secondary" size="lg" message="schedule">
-              Quero conversar pelo WhatsApp
+              Falar com {brand.professional.split(" ")[0]} pelo WhatsApp
             </WhatsappCta>
           </div>
         </Reveal>

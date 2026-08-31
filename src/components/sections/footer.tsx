@@ -20,13 +20,14 @@ export default function Footer() {
       <Container>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <a href="#top" className="flex items-center gap-3" aria-label={`${brand.name} — início`}>
-              <span className="font-display text-lg font-semibold leading-none text-ink">
-                {brand.name}
-              </span>
+            <a
+              href="#top"
+              className="font-display text-lg font-semibold leading-none text-ink"
+              aria-label={`${brand.professional} — início`}
+            >
+              {brand.professional}
             </a>
-            <p className="mt-4 font-semibold text-ink">{brand.professional}</p>
-            <p className="text-sm text-ink-soft">{brand.role}</p>
+            <p className="mt-3 text-sm text-ink-soft">{brand.role}</p>
           </div>
 
           <div>
@@ -95,20 +96,21 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm text-ink-soft">
-              Pronta para ajudar seu filho a aprender do seu jeito.
-            </p>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-faint">
+              Fale comigo
+            </h3>
             <WhatsappCta variant="primary" size="md" className="mt-4">
               Falar no WhatsApp
             </WhatsappCta>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-brand-purple-100 pt-8 text-xs text-ink-faint sm:flex-row">
+        <div className="mt-12 flex flex-col gap-2 border-t border-brand-purple-100 pt-8 text-xs text-ink-faint">
           <p>
-            © {year} {brand.name} — {brand.professional}. Todos os direitos reservados.
+            {brand.professional} — {brand.role} | Sócia e idealizadora da{" "}
+            {brand.name} — {brand.tagline}
           </p>
-          <p>Psicopedagogia Clínica em Vila Carrão, São Paulo/SP.</p>
+          <p>© {year} {brand.professional}. Todos os direitos reservados.</p>
         </div>
       </Container>
     </footer>

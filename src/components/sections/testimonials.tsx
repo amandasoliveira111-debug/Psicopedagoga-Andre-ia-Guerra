@@ -11,8 +11,8 @@ export default function Testimonials() {
       <Container>
         <SectionHeading
           eyebrow="Depoimentos"
-          title="Quem conhece, recomenda."
-          description="Avaliações de quem já conhece o trabalho."
+          title="A experiência de quem acompanha esse trabalho."
+          description="Relatos de famílias que vivenciaram o acompanhamento psicopedagógico."
         />
 
         <Reveal delay={0.12}>

@@ -1,12 +1,5 @@
 import Image from "next/image";
-import {
-  GraduationCap,
-  HeartHandshake,
-  Sprout,
-  BookOpenText,
-  Fingerprint,
-  type LucideIcon,
-} from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Reveal, RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
@@ -16,49 +9,16 @@ const badgeStyles = [
   "bg-brand-blue-50 text-brand-blue-700",
   "bg-brand-purple-100 text-brand-purple-600",
   "bg-brand-pink-100 text-brand-pink-600",
-  "bg-brand-green-300/50 text-ink",
-  "bg-brand-orange-300/50 text-ink",
-];
-
-type ValueMarker = {
-  label: string;
-  icon: LucideIcon;
-  bg: string;
-  text: string;
-};
-
-const values: ValueMarker[] = [
-  {
-    label: "Acolhimento",
-    icon: HeartHandshake,
-    bg: "bg-brand-pink-100",
-    text: "text-brand-pink-600",
-  },
-  {
-    label: "Desenvolvimento",
-    icon: Sprout,
-    bg: "bg-brand-green-300/50",
-    text: "text-ink",
-  },
-  {
-    label: "Aprendizagem",
-    icon: BookOpenText,
-    bg: "bg-brand-blue-50",
-    text: "text-brand-blue-600",
-  },
-  {
-    label: "Individualidade",
-    icon: Fingerprint,
-    bg: "bg-brand-purple-100",
-    text: "text-brand-purple-600",
-  },
+  "bg-brand-blue-100 text-brand-blue-600",
+  "bg-brand-purple-100 text-brand-purple-600",
+  "bg-brand-pink-100 text-brand-pink-600",
 ];
 
 export default function About() {
   return (
     <section id="sobre" className="py-20 sm:py-28">
       <Container>
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="grid items-start gap-12 lg:grid-cols-2">
           <Reveal>
             <div className="relative">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-card">
@@ -85,34 +45,40 @@ export default function About() {
           <div>
             <Reveal>
               <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-                Prazer, eu sou a Andréia
+                Prazer, eu sou Andréia Guerra.
               </h2>
             </Reveal>
 
             <Reveal delay={0.1}>
               <div className="mt-5 space-y-4 text-base leading-relaxed text-ink-soft sm:text-lg">
                 <p>
-                  Prazer, eu sou Andréia Guerra! 💙 Sou Pedagoga e
-                  psicopedagoga clínica, especialista em Transtornos do
-                  Neurodesenvolvimento. Minha trajetória com crianças começou
-                  há mais de 20 anos. Ao longo desse caminho, atuei como
-                  assistente social, professora e coordenadora escolar. Há 9
-                  anos, atuo exclusivamente na clínica, realizando avaliação
-                  psicopedagógica, intervenção, orientação parental e
-                  consultoria escolar.
+                  Sou assistente social, pedagoga e psicopedagoga clínica,
+                  especialista em Transtornos do Neurodesenvolvimento, com
+                  atuação em avaliação psicopedagógica e intervenção
+                  psicopedagógica de crianças e adolescentes.
                 </p>
                 <p>
-                  Mais do que olhar para as dificuldades, acredito na
-                  importância de compreender o que está por trás delas. É
-                  esse olhar que orienta cada avaliação, cada intervenção e
-                  cada orientação às famílias, sempre com base em evidências
-                  científicas e em parceria com a escola.
+                  Há 9 anos atuo na clínica acompanhando crianças e
+                  adolescentes com dificuldades de aprendizagem, TDAH, TEA e
+                  Transtorno Específico da Aprendizagem, incluindo prejuízos
+                  relacionados à leitura, escrita e matemática.
                 </p>
                 <p>
-                  Seja bem-vindo(a) à Afetiva Infância. Espero que este
-                  espaço ajude você a compreender melhor o desenvolvimento
-                  infantil e encontre informações que façam sentido para a
-                  sua família. É um prazer ter você por aqui.
+                  Meu trabalho busca compreender os fatores que interferem na
+                  aprendizagem e planejar intervenções individualizadas,
+                  considerando atenção, memória, funções executivas,
+                  raciocínio lógico, habilidades acadêmicas e aspectos
+                  socioemocionais e comportamentais.
+                </p>
+                <p>
+                  Também atuo em parceria com famílias, escolas e demais
+                  profissionais envolvidos no acompanhamento da criança ou
+                  adolescente.
+                </p>
+                <p>
+                  Sou sócia e idealizadora da Afetiva Infância — Núcleo de
+                  Desenvolvimento Infantil, espaço onde realizo meus
+                  atendimentos.
                 </p>
               </div>
             </Reveal>
@@ -132,27 +98,34 @@ export default function About() {
               ))}
             </RevealGroup>
 
-            <RevealGroup className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              {values.map(({ label, icon: Icon, bg, text }) => (
-                <RevealItem
-                  key={label}
-                  className="flex flex-col items-center gap-2 text-center"
-                >
-                  <span
-                    className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-full",
-                      bg,
-                      text
-                    )}
-                  >
-                    <Icon className="h-6 w-6" aria-hidden />
-                  </span>
-                  <span className="text-sm font-medium text-ink">
-                    {label}
-                  </span>
-                </RevealItem>
-              ))}
-            </RevealGroup>
+            <div className="mt-10 border-t border-brand-blue-100 pt-8">
+              <Reveal>
+                <h3 className="font-display text-xl font-semibold text-ink">
+                  Formação e atualização profissional
+                </h3>
+              </Reveal>
+
+              <Reveal delay={0.1}>
+                <div className="mt-4 space-y-4 leading-relaxed text-ink-soft">
+                  <p>
+                    Minha formação profissional é construída de forma
+                    contínua. Além das graduações em Serviço Social e
+                    Pedagogia e da formação em Psicopedagogia Clínica, sou
+                    especialista em Transtornos do Neurodesenvolvimento e
+                    mantenho atualização permanente por meio de cursos,
+                    formações e congressos voltados à aprendizagem,
+                    neurodesenvolvimento e prática clínica baseada em
+                    evidências.
+                  </p>
+                  <p>
+                    Entre essas formações, destaco a formação em Transtornos
+                    do Neurodesenvolvimento com o Dr. Thiago Castro, além da
+                    participação contínua em congressos, cursos e estudos de
+                    aperfeiçoamento profissional.
+                  </p>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </Container>

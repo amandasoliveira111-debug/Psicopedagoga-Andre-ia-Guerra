@@ -3,11 +3,10 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Philosophy from "@/components/sections/philosophy";
 import Services from "@/components/sections/services";
-import DevelopmentGallery from "@/components/sections/gallery";
+import AttendanceSteps from "@/components/sections/gallery";
 import Environment from "@/components/sections/environment";
 import Testimonials from "@/components/sections/testimonials";
-import InstagramCta from "@/components/sections/instagram";
-import Location from "@/components/sections/location";
+import InstagramLocation from "@/components/sections/instagram-location";
 import Faq from "@/components/sections/faq";
 import FinalCta from "@/components/sections/final-cta";
 import Footer from "@/components/sections/footer";
@@ -22,11 +21,10 @@ export default function Home() {
         <About />
         <Philosophy />
         <Services />
-        <DevelopmentGallery />
+        <AttendanceSteps />
         <Environment />
         <Testimonials />
-        <InstagramCta />
-        <Location />
+        <InstagramLocation />
         <Faq />
         <FinalCta />
       </main>

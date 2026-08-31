@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteSeo.siteUrl),
   title: {
     default: siteSeo.title,
-    template: `%s | ${brand.name}`,
+    template: `%s | ${brand.professional}`,
   },
   description: siteSeo.description,
   keywords: [...siteSeo.keywords],
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteSeo.siteUrl,
-    siteName: brand.name,
+    siteName: brand.professional,
     title: siteSeo.title,
     description: siteSeo.description,
-    images: ["/media/logo/logo-full.png"],
+    images: ["/media/images/andreia-mesa.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -46,11 +46,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: `${brand.name} - ${brand.professional}`,
+    "@type": "Person",
+    name: brand.professional,
+    jobTitle: brand.role,
     description: siteSeo.description,
     url: siteSeo.siteUrl,
-    image: `${siteSeo.siteUrl}/media/logo/logo-full.png`,
+    image: `${siteSeo.siteUrl}/media/images/andreia-mesa.jpg`,
     telephone: `+${brand.whatsappNumber}`,
     address: {
       "@type": "PostalAddress",
@@ -59,13 +60,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       addressRegion: brand.address.state,
       addressCountry: "BR",
     },
-    medicalSpecialty: "Psicopedagogia Clínica",
-    founder: {
-      "@type": "Person",
-      name: brand.professional,
-      jobTitle: brand.role,
+    affiliation: {
+      "@type": "MedicalOrganization",
+      name: `${brand.name} — ${brand.tagline}`,
     },
-    sameAs: [brand.instagramUrl],
+    sameAs: [brand.instagramUrl, brand.clinicInstagramUrl],
   };
 
   return (

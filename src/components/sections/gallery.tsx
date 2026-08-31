@@ -1,40 +1,48 @@
 import { Container } from "@/components/ui/container";
-import { Reveal } from "@/components/ui/reveal";
+import { Reveal, RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { WhatsappCta } from "@/components/ui/whatsapp-cta";
+import { attendanceSteps } from "@/lib/site-config";
 
-export default function DevelopmentGallery() {
+export default function AttendanceSteps() {
   return (
-    <section className="py-20 sm:py-28 bg-white">
-      <Container>
+    <section
+      id="processo"
+      className="py-20 sm:py-28 bg-gradient-to-b from-white via-brand-pink-50/40 to-white"
+    >
+      <Container className="max-w-3xl">
         <SectionHeading
-          eyebrow="Conquistas do dia a dia"
-          title="Pequenos avanços também são grandes conquistas."
+          eyebrow="Do primeiro contato aos próximos passos"
+          title="Como acontece o processo de avaliação psicopedagógica?"
         />
 
-        <Reveal delay={0.12} className="mx-auto mt-14 max-w-3xl">
-          <div className="rounded-3xl bg-gradient-to-br from-brand-blue-50 via-white to-brand-pink-50 p-8 shadow-soft sm:p-12">
-            <p className="text-lg leading-relaxed text-ink-soft">
-              Quando se trata de dificuldades de aprendizagem, nem sempre é
-              fácil saber o que fazer e onde encontrar ajuda. No entanto, o
-              mais indicado é buscar ajuda profissional para realizar um
-              diagnóstico e indicar as melhores intervenções.
-            </p>
-            <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-              Ao procurar uma Psicopedagoga, os problemas de aprendizagem na
-              vida de muitas crianças podem ser solucionados.
-            </p>
-            <p className="mt-5 text-lg font-semibold leading-relaxed text-ink">
-              Não deixe o tempo passar! Agende um horário e saiba como
-              ajudá-lo!!
-            </p>
+        <RevealGroup className="relative mt-14 flex flex-col gap-8">
+          <div
+            className="pointer-events-none absolute left-5 top-2 bottom-2 hidden w-px bg-brand-blue-100 sm:block"
+            aria-hidden="true"
+          />
+          {attendanceSteps.map((step) => (
+            <RevealItem key={step.number} className="relative flex gap-5">
+              <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-blue-500 font-display font-semibold text-white">
+                {step.number}
+              </span>
+              <div className="flex-1 pt-1">
+                <h3 className="font-display text-lg font-semibold text-ink">
+                  {step.title}
+                </h3>
+                <p className="mt-1 leading-relaxed text-ink-soft">
+                  {step.text}
+                </p>
+              </div>
+            </RevealItem>
+          ))}
+        </RevealGroup>
 
-            <div className="mt-8 flex justify-center">
-              <WhatsappCta variant="primary" size="lg" message="schedule">
-                Agendar atendimento
-              </WhatsappCta>
-            </div>
-          </div>
+        <Reveal className="mx-auto mt-12 max-w-2xl text-center italic leading-relaxed text-ink-soft">
+          <p>
+            Esta seção também demonstra, de forma concreta, como a prática
+            clínica baseada em evidências se traduz em um processo
+            estruturado de avaliação, análise e intervenção.
+          </p>
         </Reveal>
       </Container>
     </section>

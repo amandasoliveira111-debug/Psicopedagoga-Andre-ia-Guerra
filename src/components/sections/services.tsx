@@ -1,69 +1,38 @@
-import {
-  BookOpenText,
-  Brain,
-  ScanSearch,
-  HeartHandshake,
-  Users,
-  School,
-  type LucideIcon,
-} from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { RevealGroup, RevealItem } from "@/components/ui/reveal";
+import { Reveal, RevealGroup, RevealItem } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { services, type Service } from "@/lib/site-config";
-import { cn } from "@/lib/utils";
-
-const iconBySlug: Record<string, LucideIcon> = {
-  "psicopedagogia-clinica": BookOpenText,
-  "avaliacao-psicopedagogica": Brain,
-  "avaliacao-neuropsicologica": ScanSearch,
-  "terapia-comportamental": HeartHandshake,
-  "orientacao-familiar": Users,
-  "consultoria-escolar": School,
-};
-
-const colorClasses: Record<Service["color"], string> = {
-  blue: "bg-brand-blue-100 text-brand-blue-600",
-  pink: "bg-brand-pink-100 text-brand-pink-600",
-  green: "bg-brand-green-300 text-ink",
-  purple: "bg-brand-purple-100 text-brand-purple-600",
-  orange: "bg-brand-orange-300 text-ink",
-};
+import { atuacaoAreas } from "@/lib/site-config";
 
 export default function Services() {
   return (
-    <section id="atendimento" className="py-20 sm:py-28">
-      <Container>
+    <section id="atendimento" className="py-20 sm:py-28 bg-white">
+      <Container className="max-w-3xl">
         <SectionHeading
-          eyebrow="Áreas de atuação"
-          title="Como posso ajudar?"
-          description="Um olhar individualizado para compreender como cada criança aprende e se desenvolve."
+          eyebrow="Atendimento Psicopedagógico"
+          title="Como funciona o atendimento psicopedagógico?"
         />
 
-        <RevealGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
-            const Icon = iconBySlug[service.slug] ?? BookOpenText;
-            return (
-              <RevealItem key={service.slug}>
-                <div className="flex h-full flex-col gap-4 rounded-3xl bg-white p-7 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
-                  <div
-                    className={cn(
-                      "flex h-12 w-12 items-center justify-center rounded-2xl",
-                      colorClasses[service.color]
-                    )}
-                  >
-                    <Icon className="h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display text-lg font-semibold text-ink">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-ink-soft">
-                    {service.description}
-                  </p>
-                </div>
-              </RevealItem>
-            );
-          })}
+        <Reveal delay={0.08}>
+          <p className="text-ink-soft text-lg leading-relaxed text-center mt-4 max-w-2xl mx-auto">
+            A avaliação e a intervenção psicopedagógica ajudam a compreender
+            as dificuldades de aprendizagem, identificar habilidades que
+            precisam ser desenvolvidas e construir estratégias
+            individualizadas para favorecer o desenvolvimento acadêmico da
+            criança ou adolescente.
+          </p>
+        </Reveal>
+
+        <RevealGroup className="mt-14 divide-y divide-brand-blue-100 rounded-3xl border border-brand-blue-100 bg-white overflow-hidden">
+          {atuacaoAreas.map((area) => (
+            <RevealItem key={area.slug} className="p-7 sm:p-8">
+              <h3 className="font-display text-xl font-semibold text-brand-blue-600 mb-3">
+                {area.title}
+              </h3>
+              <p className="text-ink-soft leading-relaxed">
+                {area.description}
+              </p>
+            </RevealItem>
+          ))}
         </RevealGroup>
       </Container>
     </section>

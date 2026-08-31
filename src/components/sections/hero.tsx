@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -25,25 +26,31 @@ const item = {
   },
 };
 
+const tags = [
+  "TDAH",
+  "TEA",
+  "Transtornos de Aprendizagem",
+  "Dificuldades de Aprendizagem",
+  "Leitura",
+  "Escrita",
+  "Matemática",
+];
+
 export default function Hero() {
   return (
     <section
       id="top"
       className="relative min-h-[92vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center"
     >
-      <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/media/video/hero-background.mp4"
-        poster="/media/video/hero-background-poster.jpg"
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        aria-hidden="true"
+      <Image
+        src="/media/images/andreia-sala-brincar.jpg"
+        alt="Andréia Guerra em atendimento, segurando materiais de manipulação matemática na sala de brincar"
+        fill
+        priority
+        className="object-cover"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-brand-blue-700/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
 
       <Container>
         <motion.div
@@ -56,34 +63,33 @@ export default function Hero() {
             variants={item}
             className="inline-block rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-semibold uppercase tracking-wide text-white/90 backdrop-blur-sm"
           >
-            Cada criança tem um jeito único de aprender.
+            Psicopedagogia clínica baseada em evidências
           </motion.span>
 
           <motion.h1
             variants={item}
-            className="mt-5 text-balance text-4xl font-semibold text-white sm:text-5xl lg:text-6xl"
+            className="mt-5 text-balance font-display text-4xl font-semibold text-white sm:text-5xl lg:text-6xl"
           >
-            Desenvolvimento, aprendizagem e acolhimento para cada criança.
+            Quando aprender começa a se tornar uma preocupação, é hora de
+            entender o que está acontecendo.
           </motion.h1>
 
           <motion.p variants={item} className="mt-5 text-lg text-white/90">
-            Atendimento psicopedagógico clínico personalizado, respeitando o
-            ritmo, as necessidades e as potencialidades de cada criança.
+            Avaliação e intervenção psicopedagógica para crianças e
+            adolescentes com dificuldades e transtornos de aprendizagem.
           </motion.p>
 
-          <motion.div
+          <motion.p
             variants={item}
-            className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
+            className="mt-4 text-sm text-white/80"
           >
-            <WhatsappCta size="lg" message="hero">
-              Quero ajuda para meu filho
+            {tags.join(" • ")}
+          </motion.p>
+
+          <motion.div variants={item} className="mt-8">
+            <WhatsappCta size="lg" message="schedule">
+              Agendar atendimento
             </WhatsappCta>
-            <a
-              href="#sobre"
-              className="inline-flex items-center justify-center rounded-full border border-white/50 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition-colors duration-300 hover:bg-white/20"
-            >
-              Conheça meu trabalho
-            </a>
           </motion.div>
         </motion.div>
       </Container>
