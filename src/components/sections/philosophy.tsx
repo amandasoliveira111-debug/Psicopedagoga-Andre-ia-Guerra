@@ -47,16 +47,17 @@ export default function Philosophy() {
   return (
     <section
       id="aprendizagem"
-      className="bg-gradient-to-b from-brand-blue-50/60 via-white to-white py-20 sm:py-28"
+      className="bg-gradient-to-b from-brand-blue-600 to-brand-blue-500 py-20 sm:py-28"
     >
       <Container>
         <SectionHeading
+          invert
           eyebrow="Compreender para intervir"
           title="Aprender envolve muito mais do que compreender um conteúdo."
         />
 
         <Reveal delay={0.1}>
-          <div className="mx-auto mt-6 max-w-2xl space-y-4 text-center text-base sm:text-lg leading-relaxed text-ink-soft">
+          <div className="mx-auto mt-6 max-w-2xl space-y-4 text-center text-base sm:text-lg leading-relaxed text-white/85">
             <p>
               A aprendizagem é resultado da integração entre diferentes
               processos cognitivos, linguísticos, emocionais e executivos.
@@ -78,7 +79,7 @@ export default function Philosophy() {
         </Reveal>
 
         <Reveal delay={0.2} className="mt-14">
-          <DragGallery slideClassName="w-[78%] sm:w-[46%] lg:w-[30%]">
+          <DragGallery invert slideClassName="w-[78%] sm:w-[46%] lg:w-[30%]">
             {galleryItems.map((item) => (
               <div
                 key={item.src}

@@ -7,9 +7,13 @@ import { testimonials } from "@/lib/site-config";
 
 export default function Testimonials() {
   return (
-    <section id="depoimentos" className="py-20 sm:py-28 bg-white">
+    <section
+      id="depoimentos"
+      className="py-20 sm:py-28 bg-gradient-to-b from-brand-blue-500 to-brand-blue-600"
+    >
       <Container>
         <SectionHeading
+          invert
           eyebrow="Depoimentos"
           title="A experiência de quem acompanha esse trabalho."
           description="Relatos de famílias que vivenciaram o acompanhamento psicopedagógico."
@@ -17,6 +21,7 @@ export default function Testimonials() {
 
         <Reveal delay={0.12}>
           <DragGallery
+            invert
             className="mt-14"
             slideClassName="w-[85%] sm:w-[60%] lg:w-[33%]"
           >

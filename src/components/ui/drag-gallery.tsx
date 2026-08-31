@@ -11,6 +11,7 @@ type DragGalleryProps = {
   slideClassName?: string;
   showDots?: boolean;
   showArrows?: boolean;
+  invert?: boolean;
 };
 
 export function DragGallery({
@@ -19,6 +20,7 @@ export function DragGallery({
   slideClassName,
   showDots = true,
   showArrows = true,
+  invert = false,
 }: DragGalleryProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: "start",
@@ -75,7 +77,12 @@ export function DragGallery({
             aria-label="Anterior"
             onClick={() => emblaApi?.scrollPrev()}
             disabled={!canScrollPrev}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-purple-100 bg-white text-ink shadow-soft transition disabled:opacity-30 hover:border-brand-purple-300"
+            className={cn(
+              "flex h-11 w-11 items-center justify-center rounded-full shadow-soft transition disabled:opacity-30",
+              invert
+                ? "border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:border-white/60"
+                : "border border-brand-purple-100 bg-white text-ink hover:border-brand-purple-300"
+            )}
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
@@ -84,7 +91,12 @@ export function DragGallery({
             aria-label="Próximo"
             onClick={() => emblaApi?.scrollNext()}
             disabled={!canScrollNext}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-brand-purple-100 bg-white text-ink shadow-soft transition disabled:opacity-30 hover:border-brand-purple-300"
+            className={cn(
+              "flex h-11 w-11 items-center justify-center rounded-full shadow-soft transition disabled:opacity-30",
+              invert
+                ? "border border-white/30 bg-white/10 text-white backdrop-blur-sm hover:border-white/60"
+                : "border border-brand-purple-100 bg-white text-ink hover:border-brand-purple-300"
+            )}
           >
             <ChevronRight className="h-5 w-5" />
           </button>
@@ -101,8 +113,12 @@ export function DragGallery({
               className={cn(
                 "h-2 rounded-full transition-all duration-300",
                 i === selectedIndex
-                  ? "w-6 bg-brand-purple-500"
-                  : "w-2 bg-brand-purple-100"
+                  ? invert
+                    ? "w-6 bg-white"
+                    : "w-6 bg-brand-purple-500"
+                  : invert
+                    ? "w-2 bg-white/30"
+                    : "w-2 bg-brand-purple-100"
               )}
             />
           ))}

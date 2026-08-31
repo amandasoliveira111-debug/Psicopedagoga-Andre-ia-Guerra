@@ -16,6 +16,9 @@ export const brand = {
     state: "SP",
     full: "Rua Rogério Giorgi, 180 – Vila Carrão, São Paulo/SP",
     mapsQuery: "Rua Rogério Giorgi, 180, Vila Carrão, São Paulo - SP",
+    // Geocoded via OpenStreetMap Nominatim for a precise, reliable map embed.
+    lat: -23.5501638,
+    lng: -46.5393111,
   },
 } as const;
 
