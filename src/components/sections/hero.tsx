@@ -47,11 +47,11 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/media/video/hero-andreia-poster.jpg"
+        poster="/media/video/hero-andreia-2-poster.jpg"
         className="absolute inset-0 h-full w-full object-cover"
         aria-label="Andréia Guerra, Psicopedagoga Clínica, apresentando seu trabalho"
       >
-        <source src="/media/video/hero-andreia.mp4" type="video/mp4" />
+        <source src="/media/video/hero-andreia-2.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
