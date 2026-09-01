@@ -2,23 +2,32 @@ import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { DragGallery } from "@/components/ui/drag-gallery";
 
 const spaceImages = [
   {
-    src: "/media/images/espaco-recepcao-1.jpg",
-    alt: "Sala de espera e brincar com mesinha infantil",
+    src: "/media/images/ambiente-entrada.jpg",
+    alt: "Entrada e recepção do espaço de atendimento",
   },
   {
-    src: "/media/images/espaco-recepcao-2.jpg",
-    alt: "Espaço de recepção acolhedor",
+    src: "/media/images/ambiente-sofa-logo.jpg",
+    alt: "Área de espera com identidade visual Afetiva Infância",
   },
   {
-    src: "/media/images/crianca-avaliacao-vr.jpg",
-    alt: "Sala de atendimento com recursos de avaliação",
+    src: "/media/images/ambiente-mural-arvore.jpg",
+    alt: "Cantinho de atividades com mural ilustrado de árvore",
   },
   {
-    src: "/media/images/andreia-sala-brincar.jpg",
-    alt: "Sala de atividades preparada para o atendimento",
+    src: "/media/images/ambiente-sala-azul.jpg",
+    alt: "Sala de atividades com mesinha infantil e brinquedos",
+  },
+  {
+    src: "/media/images/ambiente-mesa-rosa.jpg",
+    alt: "Sala de atendimento com mesa infantil e materiais organizados",
+  },
+  {
+    src: "/media/images/ambiente-escritorio.jpg",
+    alt: "Espaço de atendimento com mesa de trabalho",
   },
 ];
 
@@ -62,16 +71,16 @@ export default function Environment() {
               <video
                 controls
                 preload="metadata"
-                poster="/media/video/ambiente-poster.jpg"
+                poster="/media/video/ambiente-tour-poster.jpg"
                 className="h-full w-full object-cover"
               >
-                <source src="/media/video/ambiente.mp4" type="video/mp4" />
+                <source src="/media/video/ambiente-tour.mp4" type="video/mp4" />
               </video>
             </div>
           </Reveal>
 
           <Reveal delay={0.24}>
-            <div className="grid grid-cols-2 gap-4">
+            <DragGallery slideClassName="w-[70%] sm:w-[45%]">
               {spaceImages.map((image) => (
                 <div
                   key={image.src}
@@ -81,12 +90,12 @@ export default function Environment() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    sizes="(min-width: 1024px) 20vw, (min-width: 640px) 30vw, 45vw"
+                    sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 70vw"
                     className="object-cover"
                   />
                 </div>
               ))}
-            </div>
+            </DragGallery>
           </Reveal>
         </div>
       </Container>
