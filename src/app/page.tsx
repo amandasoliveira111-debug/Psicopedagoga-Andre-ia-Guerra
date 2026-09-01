@@ -3,7 +3,6 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Philosophy from "@/components/sections/philosophy";
 import Services from "@/components/sections/services";
-import AttendanceSteps from "@/components/sections/gallery";
 import Environment from "@/components/sections/environment";
 import Testimonials from "@/components/sections/testimonials";
 import InstagramLocation from "@/components/sections/instagram-location";
@@ -21,7 +20,6 @@ export default function Home() {
         <About />
         <Philosophy />
         <Services />
-        <AttendanceSteps />
         <Environment />
         <Testimonials />
         <InstagramLocation />
