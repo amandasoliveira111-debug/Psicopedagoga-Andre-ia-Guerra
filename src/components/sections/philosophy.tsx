@@ -11,23 +11,33 @@ type GalleryItem =
 const galleryItems: GalleryItem[] = [
   {
     type: "image",
-    src: "/media/images/crianca-cartoes.jpg",
-    alt: "Atividade de leitura e escrita com cartões de palavras",
+    src: "/media/images/crianca-brincando-matematica.jpg",
+    alt: "Criança em atividade de matemática com blocos numéricos",
   },
   {
     type: "image",
-    src: "/media/images/crianca-quebra-cabeca.jpg",
-    alt: "Criança brincando com quebra-cabeça educativo",
+    src: "/media/images/andreia-atividade-matematica.jpg",
+    alt: "Andréia conduzindo atividade de raciocínio lógico com material lúdico",
   },
   {
     type: "image",
-    src: "/media/images/crianca-avaliacao-vr.jpg",
+    src: "/media/images/crianca-leitura-interpretacao.jpg",
+    alt: "Criança em atividade de leitura e interpretação de texto",
+  },
+  {
+    type: "image",
+    src: "/media/images/avaliacao-relatorios.jpg",
+    alt: "Relatórios interpretativos de avaliação psicopedagógica",
+  },
+  {
+    type: "image",
+    src: "/media/images/crianca-blocos-magneticos.jpg",
+    alt: "Criança em atividade de construção com blocos magnéticos",
+  },
+  {
+    type: "image",
+    src: "/media/images/crianca-avaliacao-vr-2.jpg",
     alt: "Avaliação psicopedagógica com uso de realidade virtual",
-  },
-  {
-    type: "image",
-    src: "/media/images/espaco-recepcao-1.jpg",
-    alt: "Espaço preparado para atividades de aprendizagem",
   },
   {
     type: "video",
