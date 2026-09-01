@@ -45,12 +45,6 @@ const galleryItems: GalleryItem[] = [
     poster: "/media/video/crianca-atividade-sensorial-poster.jpg",
     alt: "Criança em atividade sensorial com brinquedo educativo",
   },
-  {
-    type: "video",
-    src: "/media/video/crianca-atividade.mp4",
-    poster: "/media/video/crianca-atividade-poster.jpg",
-    alt: "Criança em atividade de aprendizagem com cartões e materiais escritos",
-  },
 ];
 
 export default function Philosophy() {
