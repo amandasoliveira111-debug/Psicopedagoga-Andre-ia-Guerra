@@ -43,11 +43,18 @@ export default function Hero() {
       className="relative min-h-[92vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center"
     >
       <Image
+        src="/media/images/hero-andreia-mobile.jpg"
+        alt="Andréia Guerra, Psicopedagoga Clínica, em seu espaço de atendimento"
+        fill
+        priority
+        className="object-cover block sm:hidden"
+      />
+      <Image
         src="/media/images/hero-andreia.jpg"
         alt="Andréia Guerra, Psicopedagoga Clínica, em seu espaço de atendimento"
         fill
         priority
-        className="object-cover"
+        className="object-cover hidden sm:block"
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
