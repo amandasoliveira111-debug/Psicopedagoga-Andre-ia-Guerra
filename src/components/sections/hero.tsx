@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Container } from "@/components/ui/container";
@@ -41,18 +42,13 @@ export default function Hero() {
       id="top"
       className="relative min-h-[92vh] sm:min-h-screen w-full overflow-hidden flex items-end sm:items-center"
     >
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/media/video/hero-andreia-2-poster.jpg"
-        className="absolute inset-0 h-full w-full object-cover"
-        aria-label="Andréia Guerra, Psicopedagoga Clínica, apresentando seu trabalho"
-      >
-        <source src="/media/video/hero-andreia-2.mp4" type="video/mp4" />
-      </video>
+      <Image
+        src="/media/images/hero-andreia.jpg"
+        alt="Andréia Guerra, Psicopedagoga Clínica, em seu espaço de atendimento"
+        fill
+        priority
+        className="object-cover"
+      />
 
       <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
 
