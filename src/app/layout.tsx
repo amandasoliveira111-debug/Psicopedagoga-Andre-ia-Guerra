@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: brand.professional,
     title: siteSeo.title,
     description: siteSeo.description,
-    images: ["/media/images/andreia-mesa.jpg"],
+    images: ["/media/images/andreia-retrato.jpg"],
   },
   twitter: {
     card: "summary_large_image",
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     jobTitle: brand.role,
     description: siteSeo.description,
     url: siteSeo.siteUrl,
-    image: `${siteSeo.siteUrl}/media/images/andreia-mesa.jpg`,
+    image: `${siteSeo.siteUrl}/media/images/andreia-retrato.jpg`,
     telephone: `+${brand.whatsappNumber}`,
     address: {
       "@type": "PostalAddress",

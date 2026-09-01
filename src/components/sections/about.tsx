@@ -23,8 +23,8 @@ export default function About() {
             <div className="relative">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl shadow-card">
                 <Image
-                  src="/media/images/andreia-mesa.jpg"
-                  alt="Andréia Guerra sorridente, sentada à sua mesa de atendimento, com uma estante de livros e brinquedos infantis ao fundo"
+                  src="/media/images/andreia-retrato.jpg"
+                  alt="Retrato de Andréia Guerra, Psicopedagoga Clínica"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
