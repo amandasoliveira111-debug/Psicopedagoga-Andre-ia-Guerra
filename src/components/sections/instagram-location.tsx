@@ -85,7 +85,7 @@ export default function InstagramLocation() {
           <Reveal delay={0.1}>
             <div className="overflow-hidden rounded-3xl bg-brand-pink-100 shadow-card">
               <iframe
-                src={`https://www.google.com/maps?q=${brand.address.lat},${brand.address.lng}&z=17&output=embed`}
+                src={`https://maps.google.com/maps?q=${brand.address.lat},${brand.address.lng}&z=17&output=embed`}
                 className="h-80 w-full border-0 sm:h-96"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
